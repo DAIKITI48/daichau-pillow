@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【大人気】抱いちゃう枕 - Temu風特別セール</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f4f4; margin: 0; padding: 0; color: #333; }
+    .header-banner { background: #ff5000; color: white; text-align: center; padding: 8px; font-weight: bold; font-size: 14px; }
+    .container { max-width: 900px; margin: 20px auto; background: white; padding: 20px; border-radius: 12px; display: flex; flex-wrap: wrap; gap: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .img-container { flex: 1; min-width: 300px; position: relative; }
+    .img-container img { width: 100%; border-radius: 8px; display: block; }
+    .sale-badge { position: absolute; top: 10px; left: 10px; background: #e60012; color: white; padding: 6px 12px; font-weight: bold; font-size: 18px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .details { flex: 1; min-width: 300px; }
+    .product-title { font-size: 22px; font-weight: bold; line-height: 1.4; margin-bottom: 10px; }
+    .timer-box { background: #fff2e8; border: 1px solid #ffbb96; padding: 10px 15px; border-radius: 6px; color: #ff5000; font-weight: bold; font-size: 15px; margin-bottom: 15px; }
+    .price-section { margin-bottom: 15px; }
+    .current-price { font-size: 36px; color: #ff5000; font-weight: bold; }
+    .original-price { text-decoration: line-through; color: #999; font-size: 16px; margin-left: 10px; }
+    .rating { color: #ffa800; font-weight: bold; margin-bottom: 15px; }
+    .shipping-info { background: #f6f6f6; padding: 10px; border-radius: 6px; font-size: 14px; margin-bottom: 20px; }
+    .btn-add-cart { background: linear-gradient(90deg, #ff7a00, #ff5000); color: white; border: none; width: 100%; padding: 16px; font-size: 20px; font-weight: bold; border-radius: 30px; cursor: pointer; box-shadow: 0 4px 10px rgba(255, 80, 0, 0.3); transition: transform 0.1s; }
+    .btn-add-cart:active { transform: scale(0.98); }
+  </style>
+</head>
+<body>
+
+  <div class="header-banner">⚡ FLASH SALE ⚡ 本日限定 全品送料無料＆即日発送！</div>
+
+  <div class="container">
+    <!-- 商品画像エリア -->
+    <div class="img-container">
+      <div class="sale-badge">92% OFF</div>
+      <img src="pillow.jpg" alt="抱いちゃう枕">
+    </div>
+
+    <!-- 商品詳細エリア -->
+    <div class="details">
+      <div class="product-title">【爆売れ中】両面プリント 抱いちゃう枕 (160x50cm) 高密度ピーチスキン加工</div>
+      
+      <div class="timer-box">
+        ⏰ タイムセール終了まで：<span id="timer">02:15:48</span>
+      </div>
+
+      <div class="price-section">
+        <span class="current-price">¥1,280</span>
+        <span class="original-price">¥16,000</span>
+      </div>
+
+      <div class="rating">
+        ★ 4.9 <span style="color: #666; font-weight: normal;">(15,420件のレビュー | 10万点以上売れました)</span>
+      </div>
+
+      <div class="shipping-info">
+        🚚 <strong>無料配送</strong> （3〜5日でお届け）<br>
+        🔄 90日間返金保証・返品無料
+      </div>
+
+      <button class="btn-add-cart" onclick="addToCart()">カートに追加</button>
+    </div>
+  </div>
+
+  <script>
+    // カウントダウンタイマーの簡単なプログラム
+    let time = 8148; // 2時間15分48秒
+    setInterval(() => {
+      if (time <= 0) return;
+      time--;
+      let h = Math.floor(time / 3600).toString().padStart(2, '0');
+      let m = Math.floor((time % 3600) / 60).toString().padStart(2, '0');
+      let s = (time % 60).toString().padStart(2, '0');
+      document.getElementById('timer').innerText = `${h}:${m}:${s}`;
+    }, 1000);
+
+    // ボタンを押した時のアクション（購入機能なし）
+    function addToCart() {
+      alert("「抱いちゃう枕」は現在注文が殺到しており、残りわずかです！\n(※これはデモ画面です。実際の注文は行われません)");
+    }
+  </script>
+
+</body>
+</html>
